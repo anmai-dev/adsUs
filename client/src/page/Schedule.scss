@@ -1,0 +1,239 @@
+.scheduleContainer {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        font-size: 18px;
+        color: #666;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+    }
+
+    .error-message {
+        background-color: #ffebee;
+        color: #d32f2f;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px;
+        border-left: 4px solid #d32f2f;
+        font-size: 16px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .no-matches {
+        background-color: #f5f5f5;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        margin: 20px;
+        color: #666;
+        font-size: 16px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .matchList {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .matchItem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            height: 100%;
+            min-width: 280px;
+            margin: 0 5px;
+            flex: 0 0 auto;
+            box-sizing: border-box;
+
+            .matchDate {
+                font-size: 14px;
+                font-weight: bold;
+                color: #555;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                text-align: right;
+                background-color: #f8f8f8;
+                padding: 4px 8px;
+                border-radius: 4px;
+            }
+
+            .matchDetails {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 15px;
+                width: 100%;
+                margin-top: 10px;
+
+                .teamLeft,
+                .teamRight {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 8px;
+                    width: 45%;
+                    text-align: center;
+
+                    .teamLogo {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 8px;
+                        object-fit: contain;
+                        border: 1px solid #eee;
+                        background-color: white;
+                        padding: 2px;
+                    }
+
+                    .teamNameLeft,
+                    .teamNameRight {
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #333;
+                        text-align: center;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 100%;
+                    }
+                }
+
+                .matchTime {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #333;
+                    text-align: center;
+                    background-color: #f0f0f0;
+                    padding: 6px 10px;
+                    border-radius: 8px;
+                    min-width: 80px;
+                }
+            }
+
+            .cupType {
+                font-size: 13px;
+                color: #666;
+                background-color: #f0f0f0;
+                padding: 4px 10px;
+                border-radius: 20px;
+                margin-top: 10px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .matchList {
+            padding: 10px 0;
+
+            .matchItem {
+                min-width: 230px;
+                margin: 0 4px;
+                padding: 10px 8px;
+
+                .matchDate {
+                    font-size: 12px;
+                    padding: 2px 6px;
+                    top: 5px;
+                    right: 5px;
+                }
+
+                .matchDetails {
+                    gap: 5px;
+
+                    .teamLeft,
+                    .teamRight {
+                        width: 40%;
+                        
+                        .teamLogo {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 6px;
+                            object-fit: contain;
+                        }
+
+                        .teamNameLeft,
+                        .teamNameRight {
+                            font-size: 11px;
+                            max-width: 90px;
+                        }
+                    }
+
+                    .matchTime {
+                        font-size: 14px;
+                        min-width: 50px;
+                        padding: 4px 6px;
+                    }
+                }
+
+                .cupType {
+                    font-size: 11px;
+                    padding: 3px 8px;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 320px) {
+        .matchList {
+            .matchItem {
+                min-width: 200px;
+                margin: 0 3px;
+                padding: 8px 6px;
+
+                .matchDetails {
+                    gap: 3px;
+
+                    .teamLeft,
+                    .teamRight {
+                        .teamLogo {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 5px;
+                            object-fit: contain;
+                        }
+
+                        .teamNameLeft,
+                        .teamNameRight {
+                            font-size: 10px;
+                        }
+                    }
+
+                    .matchTime {
+                        font-size: 12px;
+                        min-width: 45px;
+                        padding: 3px 5px;
+                    }
+                }
+            }
+        }
+    }
+}

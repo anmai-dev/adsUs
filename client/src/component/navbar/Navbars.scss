@@ -1,0 +1,149 @@
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo-img {
+        height: 50px;
+        width: auto;
+
+        &.ml-4 {
+            margin-left: 16px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__advertisement {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 14px;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: 1px solid #007bff;
+        color: #007bff;
+        padding: 6px 12px;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s, color 0.2s;
+
+        &:hover {
+            background-color: #007bff;
+            color: white;
+        }
+    }
+
+    &__menu {
+        background-color: #007bff;
+        padding: 10px 0;
+        position: relative;
+    }
+
+    &__menu-container {
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+        padding: 0 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+
+        &.active {
+            display: flex; // Đảm bảo menu hiển thị khi active
+        }
+    }
+
+    &__menu-item {
+        color: white;
+        font-size: 14px; // Kích thước chữ mặc định trên desktop
+        text-decoration: none;
+        transition: color 0.2s;
+
+        &:hover {
+            color: #ffcc00;
+        }
+    }
+
+    &__menu-toggle {
+        display: none; // Ẩn mặc định trên desktop
+        color: white;
+        background: none;
+        border: none;
+        font-size: 24px; // Tăng kích thước icon hamburger
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        &__container {
+            flex-wrap: wrap;
+            padding: 10px 15px;
+        }
+
+        &__actions {
+            margin-top: 10px;
+            width: 100%;
+            justify-content: flex-end;
+            gap: 10px; // Giảm gap trên mobile
+        }
+
+        &__menu {
+            padding: 15px 0; // Tăng padding cho menu trên mobile
+        }
+
+        &__menu-container {
+            display: none; // Ẩn menu mặc định trên mobile
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            padding: 15px; // Tăng padding cho rõ ràng hơn
+            background-color: #007bff; // Đảm bảo nền đồng nhất
+
+            &.active {
+                display: flex; // Hiển thị khi nhấn toggle
+            }
+        }
+
+        &__menu-item {
+            font-size: 16px; // Tăng kích thước chữ trên mobile
+            margin: 10px 0; // Tăng khoảng cách giữa các mục
+            padding: 5px 0; // Thêm padding để dễ nhấn
+        }
+
+        &__menu-toggle {
+            display: block; // Hiển thị nút hamburger trên mobile
+        }
+
+        &__button {
+            font-size: 12px; // Giảm nhẹ kích thước nút trên mobile nếu cần
+            padding: 5px 10px;
+        }
+    }
+}

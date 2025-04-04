@@ -1,0 +1,166 @@
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+    padding: 20px;
+
+    .signup-form {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        width: 400px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+
+        h2 {
+            margin-bottom: 30px;
+            color: #1a237e;
+            font-size: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 3px;
+                background: linear-gradient(90deg, #1a237e, #ffd700);
+                border-radius: 2px;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: 600;
+                color: #1a237e;
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            input {
+                width: 100%;
+                padding: 12px 15px;
+                background: #f8f9fa;
+                border: 2px solid #e9ecef;
+                border-radius: 8px;
+                font-size: 15px;
+                color: #2c3e50;
+                transition: all 0.3s ease;
+
+                &:focus {
+                    border-color: #1a237e;
+                    background: #fff;
+                    outline: none;
+                    box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.1);
+                }
+            }
+        }
+
+        .form-actions {
+            margin-top: 30px;
+
+            button {
+                width: 100%;
+                padding: 14px;
+                background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-size: 16px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 5px 15px rgba(26, 35, 126, 0.3);
+                }
+
+                &:active {
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        .login-link {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+
+            p {
+                margin: 0;
+                font-size: 14px;
+                color: #6c757d;
+
+                a {
+                    color: #1a237e;
+                    text-decoration: none;
+                    font-weight: 600;
+                    margin-left: 5px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .benefits {
+            margin-top: 25px;
+            padding: 20px;
+            background: rgba(26, 35, 126, 0.05);
+            border-radius: 8px;
+
+            h3 {
+                color: #1a237e;
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: left;
+
+                li {
+                    color: #2c3e50;
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    padding-left: 25px;
+                    position: relative;
+
+                    &:before {
+                        content: '✓';
+                        position: absolute;
+                        left: 0;
+                        color: #ffd700;
+                        font-weight: bold;
+                    }
+
+                    strong {
+                        color: #1a237e;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.post {
+    padding: 20px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    gap: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+        width: 250px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    h2 {
+        flex: 1;
+        font-size: 1.4rem;
+        color: #2c3e50;
+        margin: 0;
+        line-height: 1.5;
+        font-weight: 600;
+    }
+}
+
+// Responsive styles
+@media (max-width: 1200px) {
+    .post {
+        padding: 18px;
+        gap: 20px;
+
+        img {
+            width: 220px;
+            height: 160px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .post {
+        padding: 15px;
+        gap: 15px;
+
+        img {
+            width: 200px;
+            height: 150px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .post {
+        flex-direction: column;
+        padding: 15px;
+        margin: 12px 0;
+        text-align: center;
+
+        img {
+            width: 100%;
+            height: 220px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-top: 12px;
+            line-height: 1.4;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .post {
+        padding: 12px;
+        margin: 10px 0;
+
+        img {
+            height: 200px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+    }
+}

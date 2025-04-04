@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "portfinder": "^1.0.35",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1"
+  }
+}
